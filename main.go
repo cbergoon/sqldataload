@@ -123,5 +123,4 @@ func main() {
 
 		log.Default().Printf("completed file %s in %s", f, time.Since(s2))
 	}
-
 }
