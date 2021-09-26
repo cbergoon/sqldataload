@@ -106,7 +106,7 @@ func main() {
 		s := time.Now()
 		contents, err := os.ReadFile(f)
 		if err != nil {
-			log.Fatal(err)
+			log.Println(err)
 		}
 
 		log.Default().Printf("read file %s in %s", f, time.Since(s))
@@ -114,7 +114,7 @@ func main() {
 
 		res, err := mssqldb.Exec(string(contents))
 		if err != nil {
-			log.Fatal(err)
+			log.Println(err)
 		}
 		res.RowsAffected()
 
