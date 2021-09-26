@@ -115,6 +115,8 @@ func main() {
 		res, err := mssqldb.Exec(string(contents))
 		if err != nil {
 			log.Println(err)
+			log.Default().Printf("aborted file %s in %s", f, time.Since(s1))
+			continue
 		}
 		res.RowsAffected()
 
